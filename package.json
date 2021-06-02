@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.9",
+    "city-zip-by-phone": "^0.1.4",
+    "phone": "^2.4.21"
+  }
+}
