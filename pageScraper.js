@@ -1,6 +1,7 @@
 const cheerio = require("cheerio");
 const axios = require("axios");
 const phoneValidator = require("./phoneValidation");
+const writeCsv = require("./writeCsv");
 
 const scraper = {};
 
@@ -167,7 +168,9 @@ scraper.scrapeDomain = async (domain) => {
             phone,
           };
 
-          console.log(data);
+          writeCsv(data);
+          console.log(`Scraped ${initalDomain} successfully`);
+          return data;
         }
       }
     }
