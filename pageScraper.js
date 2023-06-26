@@ -177,13 +177,4 @@ scraper.scrapeDomain = async (domain) => {
   }
 };
 
-scraper.scrapeUrls = async (urls) => {
-  while (urls.length > 0) {
-    const url = urls.shift();
-    if (url) {
-      await scraper.scrapeDomain(url);
-    }
-  }
-};
-
 module.exports = scraper;

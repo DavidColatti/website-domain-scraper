@@ -31,8 +31,8 @@ const main = async () => {
       cluster.worker.disconnect();
     }
 
-    const promises = workerUrls.map(async (url) => {
-      return await scraper.scrapeDomain(url);
+    const promises = workerUrls.map((url) => {
+      return scraper.scrapeDomain(url);
     });
 
     const result = await Promise.all(promises);
