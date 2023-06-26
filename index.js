@@ -3,7 +3,7 @@ const cluster = require("cluster");
 const forks = require("os").cpus().length;
 const scraper = require("./pageScraper");
 
-const urls = fs.readFileSync(`domains.txt`).toString().split("\r\n");
+const urls = fs.readFileSync(`domains.txt`).toString().split("\n");
 
 const main = async () => {
   if (cluster.isMaster) {
